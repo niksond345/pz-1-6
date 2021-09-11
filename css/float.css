@@ -1,0 +1,104 @@
+:root {
+    --gutter-width: 20px;
+}
+html {
+    margin: 0;
+    font-size: 14px;
+    font-family: Arial;
+    height: 100%;
+}
+body {
+    height: 100%;
+}
+header {
+    padding: var(--gutter-width) calc(var(--gutter-width) * 2);
+    height: 10%;
+    box-sizing: border-box;
+}
+header > h2 {
+    float: left;
+    vertical-align: middle;
+    margin: 0;
+}
+header > h2 > a{
+    color: blue;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+header > nav {
+    float: left;
+    margin-top: 7px;
+}
+
+header .app-nav-list > li{
+    float: left;
+    margin-left: var(--gutter-width);
+}
+header .app-nav-list > li a {
+    text-decoration: none;
+}
+header .app-main-btn {
+    border: none;
+    padding: calc(var(--gutter-width) / 2) var(--gutter-width);
+    background: red;
+    color: white;
+    text-transform: uppercase;
+}
+header > .app-main-btn {
+    float: right;
+}
+
+/*main*/
+.app-main-wrap {
+    margin: 0 calc(var(--gutter-width) * 2);
+    height: 80%;
+    box-sizing: border-box;
+}
+.app-main-wrap .app-main{
+    float: left;
+    width: calc(75% - var(--gutter-width));
+    height: 100%;
+    text-align: center;
+    margin-right: var(--gutter-width);
+}
+.app-main-wrap .app-sidebar{
+    border: 1px solid #000;
+    float: left;
+    width: calc(25% - var(--gutter-width));
+    box-sizing: border-box;
+    height: 100%;
+    padding: var(--gutter-width);
+    margin-left: var(--gutter-width);
+}
+.app-main-wrap .desc {
+    margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
+}
+
+
+footer {
+    margin: 0 calc(var(--gutter-width) * 2);
+    height: 10%;
+    text-align: center;
+    overflow: auto;
+    box-sizing: border-box;
+}
+/*utils*/
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: blue;
+    margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
+}
+h2 {
+    font-size: 24px;
+    margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
+    font-weight: bold;
+    color: blue;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
