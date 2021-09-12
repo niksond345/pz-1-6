@@ -75,5 +75,6 @@ Scripts should be placed before closing body tag.
 * [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/).
 * [All About Floats](https://css-tricks.com/all-about-floats/).
 * [Responsive Web Design - Media Queries](https://www.w3schools.com/css/css_rwd_mediaqueries.asp).
+* [Практическое применение FlexBox](https://habr.com/ru/post/242545/).
 
 
