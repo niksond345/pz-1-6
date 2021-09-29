@@ -4,9 +4,11 @@ html {
     font-family: Arial;
     height: 100%;
 }
+
 body {
     height: 100%;
 }
+
 header {
     padding: var(--gutter-width) calc(var(--gutter-width) * 2);
     height: var(--header-height);
