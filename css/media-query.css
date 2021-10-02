@@ -2,14 +2,21 @@
 /* No media query for `xs` since this is the default in Bootstrap*/
 /*utils*/
 h1 {
-  font-size: 32px;
+  font-size: calc(20px + 2vw);
   font-weight: bold;
   color: var(--title-color-mobile);
   margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
 }
 
 h2 {
-  font-size: 24px;
+  font-size: calc(14px + 2vh);
+  margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
+  font-weight: bold;
+  color: var(--title-color-mobile);
+}
+
+h3 {
+  font-size: calc(14px + 1vh);
   margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
   font-weight: bold;
   color: var(--title-color-mobile);
@@ -26,9 +33,19 @@ h2 {
   display: none;
 }
 
+.app-mobile {
+  display: inline;
+}
+
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
+  .app-table {
+    display: none;
+  }
 
+  .app-mobile {
+    display: inline;
+  }
 }
 
 /*Medium devices (tablets, 768px and up)*/
