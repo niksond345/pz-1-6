@@ -28,6 +28,14 @@ h3 {
   display: table;
 }
 
+.header .button {
+  background-color: var(--button-color-mobile);
+}
+
+.app-main .content .image-wrapper img{
+    width: 100%;
+  }
+
 
 .app-table, .app-desktop {
   display: none;
@@ -35,6 +43,13 @@ h3 {
 
 .app-mobile {
   display: inline;
+}
+
+@media (max-width: 530px) {
+  .header .button {
+    position: relative;
+    right: -20px;
+  }
 }
 
 /*Small devices (landscape phones, 576px and up)*/
@@ -68,6 +83,10 @@ h3 {
 
   h2 {
     color: var(--title-color-table);
+  }
+
+  .header .button {
+    background-color: var(--button-color-table);
   }
 
   .app-mobile {
@@ -112,5 +131,9 @@ h3 {
 
   h2 {
     color: var(--title-color-desktop);
+  }
+
+  .header .button {
+    background-color: var(--button-color-desktop);
   }
 }
