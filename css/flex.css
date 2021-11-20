@@ -1,46 +1,8 @@
-* {
-  font-size: 12px;
-  font-family: Arial;
-  box-sizing: border-box;
-}
-
-ul > li {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-p {
-  line-height: 1.7;
-}
-
-body {
-  height: 100%;
-}
-
 .header {
-  padding: var(--gutter-width) calc(var(--gutter-width) * 2);
-  height: var(--header-height);
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  min-height: 150px;
-  width: 100%;
-  color: var(--title-color-mobile);
-}
-
-.header > h2 > a{
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.header > nav {
-  margin-top: 7px;
-  width: 100%;
 }
 
 .app-nav-list{
@@ -51,75 +13,16 @@ body {
   margin-right: 10px;
 }
 
-header .app-nav-list > li{
-  margin-left: var(--gutter-width);
-  min-width: fit-content;
-}
-
-.button {
-  border: none;
-  padding: calc(var(--gutter-width) / 2) var(--gutter-width);
-  width: fit-content;
-  height: fit-content;
-  background: var(--button-color-mobile);
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  user-select: none;
-  margin: 5px;
-}
-
-.button:active,
-.button:focus,
-.button:hover {
-  border: none;
-  outline: none;
-}
-.button:hover {
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.404);
-  color: var(--title-color-mobile);
-}
-
 .app-main{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-}
-
-.content{
-  width: var(--container-width-mobile);
-}
-
-.content-title,
-.content-description {
-  text-align: center;
-}
-
-.app-sidebar{
-  border: 1px solid #000;
-  padding: var(--gutter-width);
-  width: var(--container-width-mobile);
-
-}
-
-.app-main-wrap .desc {
-  margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
-}
-
-.image-wrapper img{
-  width: var(--container-width-mobile);
-  margin: 20px 0;
 }
 
 .footer{
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  width: var(--container-width-mobile);
   justify-content: center;
-  padding: 0 30px;
-  margin: 0 auto;
 }

@@ -1,6 +1,29 @@
 /* Extra small devices (portrait phones, less than 576px)*/
 /* No media query for `xs` since this is the default in Bootstrap*/
 /*utils*/
+* {
+  font-size: 12px;
+  font-family: Arial;
+  box-sizing: border-box;
+}
+
+ul > li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  line-height: 1.7;
+}
+
+body {
+  height: 100%;
+}
+
 h1 {
   font-size: calc(20px + 2vw);
   font-weight: bold;
@@ -22,6 +45,53 @@ h3 {
   color: var(--title-color-mobile);
 }
 
+.button {
+  border: none;
+  padding: calc(var(--gutter-width) / 2) var(--gutter-width);
+  width: fit-content;
+  height: fit-content;
+  background: var(--button-color-mobile);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  user-select: none;
+  margin: 5px;
+}
+
+.button:active,
+.button:focus,
+.button:hover {
+  border: none;
+  outline: none;
+}
+.button:hover {
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.404);
+  color: var(--title-color-mobile);
+}
+
+.header {
+  padding: var(--gutter-width) calc(var(--gutter-width) * 2);
+  height: var(--header-height);
+  min-height: 150px;
+  width: 100%;
+  color: var(--title-color-mobile);
+}
+
+.header > h2 > a{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header > nav {
+  margin-top: 7px;
+  width: 100%;
+}
+
+header .app-nav-list > li{
+  margin-left: var(--gutter-width);
+  min-width: fit-content;
+}
+
 .clearfix::after {
   content: "";
   clear: both;
@@ -33,9 +103,36 @@ h3 {
 }
 
 .app-main .content .image-wrapper img{
-    width: 100%;
-  }
+  width: 100%;
+}
 
+.app-main{
+  height: 100%;
+}
+
+.content{
+  width: var(--container-width-mobile);
+}
+
+.content-title,
+.content-description {
+  text-align: center;
+}
+
+.app-sidebar{
+  border: 1px solid #000;
+  padding: var(--gutter-width);
+  width: var(--container-width-mobile);
+}
+
+.app-main-wrap .desc {
+  margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
+}
+
+.image-wrapper img{
+  width: var(--container-width-mobile);
+  margin: 20px 0;
+}
 
 .app-table, .app-desktop {
   display: none;
@@ -43,6 +140,13 @@ h3 {
 
 .app-mobile {
   display: inline;
+}
+
+.footer{
+  text-align: center;
+  width: var(--container-width-mobile);
+  padding: 0 30px;
+  margin: 0 auto;
 }
 
 @media (max-width: 530px) {
