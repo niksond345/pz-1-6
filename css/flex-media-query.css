@@ -1,8 +1,24 @@
 
+@media (min-width: 450px) {
+  .header {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header .button {
+    right: -20px;
+  }
+}
+
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
   .header {
     justify-content:flex-start;
+  }
+
+  .header .app-nav-list {
+    max-width: 50%;
   }
 
   .app-main{

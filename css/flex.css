@@ -1,8 +1,12 @@
 .header {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.header > nav {
+  width: 100%;
 }
 
 .app-nav-list{
@@ -11,6 +15,7 @@
   align-items: center;
   justify-content: space-evenly;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .app-main{
