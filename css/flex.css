@@ -1,12 +1,19 @@
 .header {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
+
+
 
 .header > nav {
   width: 100%;
+  margin-top: 63px;
+}
+
+.header .button {
+  position: relative;
 }
 
 .app-nav-list{
@@ -23,6 +30,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .footer{

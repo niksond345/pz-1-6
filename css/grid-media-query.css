@@ -1,76 +1,39 @@
 /*Small devices (landscape phones, 425px and up)*/
-@media (min-width: 425px) {
-  header {
-    grid-area: header;
-    display: grid;
-    grid-template: "text text text text" 50%
-    ". . . botton" 50%;
+@media (min-width: 450px) {
+  .header {
+    grid-template: "logo nav button"/ auto 1fr auto;
   }
 
-  .viti-header-text {
-    grid-area: text;
-    display: grid;
-    grid-template: "text1 text2 text3 text4";
-    text-align: left;
+  .header > nav {
+    margin-top: 21px;
+  }
+
+  .header .app-nav-list {
+    grid-template: "item item item" / 65px 65px 65px;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .header > h2{
+    margin-right: 20px;
   }
 }
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-  body {
-    grid-template: "header" 15vmin
-    "main"
-    "sidebar"
-    "footer" 20vmin;
-    height: 100vh;
-    margin: 0;
+  .app-main {
+    grid-template: "content sidebar" / 75% 20%;
   }
 
-  header {
-    grid-area: header;
-    display: grid;
-    grid-template: "text text text text . . botton";
-    height: 1vw;
-  }
-
-  .viti-header-text {
-    grid-area: text;
-    display: grid;
-    grid-template: "text1 text2 text3 text4";
-    text-align: left;
+  .header .app-nav-list {
+    grid-template: "item item item" / 75px 75px 75px;
   }
 }
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-  .app-main-wrap .app-main {
-    width: calc(75% - var(--gutter-width));
-    margin: 0 var(--gutter-width) 0 0;
-  }
 
-  .app-main-wrap .app-sidebar {
-    width: calc(25% - var(--gutter-width));
-    margin: 0 0 0 var(--gutter-width);
-  }
-
-  body {
-    grid-template:
-      "header header" 20vmin
-      "main   sidebar"
-      "footer footer" 20vmin
-      / 75vw  25vw
-  ;
-    margin: 0;
-  }
-
-  .viti-header-text{
-    grid-area: text;
-    display: grid;
-    grid-template:
-      "text1 text2 text3 text4"
-      / 30% 15% 15% 15%
-  ;
-  }
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/

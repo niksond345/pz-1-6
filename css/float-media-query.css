@@ -1,16 +1,21 @@
 @media (min-width: 450px) {
+  .header > h2 {
+    width: fit-content;
+  }
 
-  .header .button {
-    right: -55px;
-    top: -18px;
+  .header > nav {
+    margin-left: 10px;
+  }
+
+  .header > .button {
+    right: -16px;
   }
 }
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
-  .header .button {
+  .header > .button {
     right: 0;
-    top: 0;
   }
 }
 
