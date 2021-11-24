@@ -1,32 +1,51 @@
+@media (min-width: 450px) {
+  .header > h2 {
+    width: fit-content;
+  }
+
+  .header > nav {
+    margin-left: 10px;
+  }
+
+  .header > .button {
+    right: -16px;
+  }
+}
+
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
-
+  .header > .button {
+    right: 0;
+  }
 }
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-
-
-}
-
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-  .app-main-wrap .app-main{
+  .app-main .content{
     float: left;
     width: calc(75% - var(--gutter-width));
     height: 100%;
     margin:0 var(--gutter-width) 0 0;
   }
 
-  .app-main-wrap .app-sidebar{
+  .app-main .app-sidebar{
     float: left;
     width: calc(25% - var(--gutter-width));
-    height: 100%;
-    margin:0 0 0 var(--gutter-width);
+    height: 720px;
+  }
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  .app-main .app-sidebar{
+    height: 840px;
   }
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-
+  .app-main .app-sidebar{
+    height: 960px;
+  }
 }

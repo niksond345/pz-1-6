@@ -1,84 +1,57 @@
-html {
-  margin: 0;
-  font-size: 20px;
-  font-family: Arial;
-}
-
 body {
   display: grid;
-}
-
-body {
-  grid-template: "header" 40vmin
+  grid-template: "header"
                   "main"
-                  "sidebar"
-                  "footer" 20vmin;
-  height: 100vh;
-  margin: 0;
+                  "footer";
 }
 
-footer, div, section, aside {
-  padding: 2vw;
-}
 
-header {
-  grid-area: header;
+.header {
+  grid-area: header; 
   display: grid;
-  grid-template: "text text text" 80%
-                  ". . botton" 20%;
+  grid-template: "logo button"
+                  "nav nav";
 }
 
-.viti-header-text {
-  grid-area: text;
+.header > h2 {
+  grid-area: logo;
+}
+
+.header > nav {
+  grid-area: nav;
+}
+
+.header .app-nav-list {
   display: grid;
-  grid-template: "text1 text1 text1" 50%
-                  "text2 text3 text4" 50%;
-  text-align: left;
+  grid-template: "item item item";
+  position: relative;
 }
 
-header .viti-button {
-  border: none;
-  padding: calc(var(--gutter-width) / 2) var(--gutter-width);
-  background: var(--button-color-mobile);
-  color: white;
-  text-transform: uppercase;
-}
-
-.viti-header-text-h2 {
-  grid-area: text1;
-  margin: 6px;
-}
-
-.viti-header-text-text2 {
-  grid-area: text2;
-}
-
-.viti-header-text-text3 {
-  grid-area: text3;
-}
-
-.viti-header-text-text4 {
-  grid-area: text4;
-}
-
-.viti-header-button {
-  grid-area: botton;
-  margin-left: 20vw;
-}
-
-footer {
-  grid-area: footer;
-  text-align: center;
+.header > .button {
+  grid-area: button;
+  position: absolute;
+  top: 23px;
+  right: 16px;
 }
 
 .app-main {
   grid-area: main;
-  text-align: center;
+  display: grid;
+  grid-template: "content"
+                  "sidebar" 110px;
 }
 
-.app-sidebar {
-  grid-area: sidebar;
-  padding: 20px;
-  border: 3px solid black;
-  margin: 5px;
+.app-main .content {
+  grid-area: content;
 }
+
+.app-main .app-sidebar {
+  grid-area: sidebar;
+}
+
+
+.footer {
+  grid-area: footer;
+}
+
+

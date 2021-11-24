@@ -1,6 +1,34 @@
 /* Extra small devices (portrait phones, less than 576px)*/
 /* No media query for `xs` since this is the default in Bootstrap*/
 /*utils*/
+* {
+  font-size: 12px;
+  font-family: Arial;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul > li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  line-height: 1.7;
+}
+
+body {
+  height: 100%;  
+}
+
 h1 {
   font-size: calc(20px + 2vw);
   font-weight: bold;
@@ -22,14 +50,87 @@ h3 {
   color: var(--title-color-mobile);
 }
 
+.button {
+  border: none;
+  padding: calc(var(--gutter-width) / 2) var(--gutter-width);
+  width: fit-content;
+  height: fit-content;
+  background: var(--button-color-mobile);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  user-select: none;
+  margin: 5px;
+}
+
+.button:active,
+.button:focus,
+.button:hover {
+  border: none;
+  outline: none;
+}
+.button:hover {
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.404);
+  color: var(--title-color-mobile);
+}
+
+.header {
+  padding: var(--gutter-width) calc(var(--gutter-width) * 2);
+  height: var(--header-height);
+  min-height: 150px;
+  width: 100%;
+  color: var(--title-color-mobile);
+}
+
+.header > h2 > a{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+header .app-nav-list > li{
+  margin-left: 5px;
+  min-width: fit-content;
+}
+
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
 
+.header .button {
+  background-color: var(--button-color-mobile);
+}
 
-.app-table, .app-desktop {
+.app-main .content .image-wrapper img{
+  width: 100%;
+}
+
+.container{
+  width: var(--container-width-mobile);
+  margin: 0 auto;
+  position: relative;
+}
+
+.content-title,
+.content-description {
+  text-align: center;
+}
+
+.app-sidebar{
+  border: 1px solid #000;
+  padding: var(--gutter-width);
+  width: var(--container-width-mobile);
+}
+
+.image-wrapper img{
+  width: var(--container-width-mobile);
+  margin: 20px 0;
+}
+
+.app-tablet, .app-desktop {
   display: none;
 }
 
@@ -37,9 +138,22 @@ h3 {
   display: inline;
 }
 
+.footer{
+  text-align: center;
+  width: var(--container-width-mobile);
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+@media (min-width: 450px) {
+  .header > nav {
+    margin-top: 7px;
+  }
+}
+
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
-  .app-table {
+  .app-tablet {
     display: none;
   }
 
@@ -70,29 +184,40 @@ h3 {
     color: var(--title-color-table);
   }
 
+  .header .button {
+    background-color: var(--button-color-table);
+  }
+
+  .app-main .content {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .app-sidebar{
+    width: 25vw;
+  }
+
   .app-mobile {
     display: none;
   }
 
-  .app-table {
+  .app-tablet {
     display: inline;
   }
 
+  
 }
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-  .app-table {
+  .app-tablet {
     display: none;
   }
 
   .app-desktop {
     display: inline;
   }
-}
 
-/*Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
   header > h2 > a {
     color: var(--title-color-desktop);
   }
@@ -113,4 +238,13 @@ h3 {
   h2 {
     color: var(--title-color-desktop);
   }
+
+  .header .button {
+    background-color: var(--button-color-desktop);
+  }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  
 }
